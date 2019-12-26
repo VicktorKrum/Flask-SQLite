@@ -1,0 +1,4 @@
+https://www.edureka.co/post-graduate/machine-learning-and-ai?utm_source=taboola&utm_medium=referral&utm_campaign=Taboola02-leads-dec2019
+Geeksforgeeks - https://www.geeksforgeeks.org/flask-creating-first-simple-application/
+javatpoint -https://www.javatpoint.com/flask-app-routing
+tutorialspoint - https://www.tutorialspoint.com/flask/flask_application.htm
