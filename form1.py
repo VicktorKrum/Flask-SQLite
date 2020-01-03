@@ -8,6 +8,8 @@ app = Flask(__name__)
 def home():
     return render_template('f_form.html')
 
+
+
 @app.route('/addrec',methods = ['POST', 'GET'])
 def addrec():
    if request.method == 'POST':
@@ -46,5 +48,22 @@ def addrec():
          conn.close()
 
 
+@app.route('/dbselect')
+def dbselect():
+      print('in select')
+      try:
+         conn = sqlite3.connect("database1.db")
+      except Error as e:
+         print(e)
+      print('database connected')
+      conn.row_factory = sqlite3.Row
+      query2 = """Select * from Contact"""
+      cur = conn.cursor()
+      cur.execute(query2)
+      rows = cur.fetchall();
+      #conn.close()
+      return render_template("dbtable.html", rows = rows)
+
+      
 if __name__ == '__main__':
        app.run(debug = True)
